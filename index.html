@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>T47 Group — Holding Company</title>
+<meta name="description" content="T47 Group is a Phoenix-based holding company building, operating, and investing in ventures across technology, staffing, and consumer products." />
+<style>
+  :root{
+    --bg:#0a0a0c; --bg2:#101013; --ink:#f3f1ea; --muted:#a5a08f; --faint:#6f6a5c;
+    --line:rgba(255,255,255,.09); --card:rgba(255,255,255,.03);
+    --gold:#c9a24b; --gold2:#e6c876; --steel:#8a97a8;
+    --serif:Georgia,'Times New Roman',ui-serif,serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;
+    color:var(--ink); background:var(--bg); line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    background-image:
+      radial-gradient(900px 520px at 82% -12%, rgba(201,162,75,.14), transparent 62%),
+      radial-gradient(760px 520px at -5% 8%, rgba(138,151,168,.08), transparent 58%);
+    background-attachment:fixed;
+  }
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 26px}
+
+  /* header */
+  header{position:sticky;top:0;z-index:10;backdrop-filter:blur(10px);
+    background:rgba(10,10,12,.74);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:70px}
+  .brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.3px;font-size:17px}
+  .logo{width:40px;height:40px;border-radius:10px;display:grid;place-items:center;font-family:var(--serif);font-weight:700;font-size:15px;letter-spacing:.5px;color:#0a0a0c;
+    background:linear-gradient(135deg,var(--gold2),var(--gold));box-shadow:0 6px 22px rgba(201,162,75,.34)}
+  .brand small{display:block;color:var(--muted);font-weight:600;font-size:11px;letter-spacing:1.4px;text-transform:uppercase;margin-top:2px}
+  nav .links{display:flex;gap:28px;align-items:center}
+  nav .links a{color:var(--muted);font-size:14.5px;font-weight:600;transition:color .15s}
+  nav .links a:hover{color:var(--ink)}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:10px;font-weight:700;font-size:14px;
+    background:linear-gradient(135deg,var(--gold2),var(--gold));color:#0a0a0c;transition:transform .15s,box-shadow .15s}
+  .btn:hover{transform:translateY(-1px);box-shadow:0 10px 30px rgba(201,162,75,.32)}
+  @media(max-width:660px){nav .links{display:none}}
+
+  /* hero */
+  .hero{padding:120px 0 78px;text-align:center}
+  .eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;
+    color:var(--gold2);border:1px solid var(--line);border-radius:999px;padding:8px 16px;background:var(--card);margin-bottom:28px}
+  h1{font-family:var(--serif);font-size:clamp(36px,6.4vw,66px);line-height:1.04;font-weight:700;letter-spacing:-.5px;max-width:16ch;margin:0 auto 24px}
+  h1 .grad{background:linear-gradient(120deg,var(--gold2),var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .lede{font-size:clamp(16px,2.2vw,19px);color:var(--muted);max-width:62ch;margin:0 auto 34px}
+  .cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+  .btn.ghost:hover{background:var(--card);box-shadow:none}
+
+  /* section */
+  section{padding:66px 0}
+  .sec-head{margin-bottom:36px}
+  .sec-head .k{font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--faint);margin-bottom:11px}
+  .sec-head h2{font-family:var(--serif);font-size:clamp(26px,4vw,38px);font-weight:700;letter-spacing:-.3px}
+  .sec-head p{color:var(--muted);margin-top:11px;max-width:64ch}
+
+  /* portfolio */
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px}
+  .card{position:relative;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:28px 26px;
+    transition:transform .18s,border-color .18s,background .18s;overflow:hidden;display:flex;flex-direction:column}
+  .card:hover{transform:translateY(-3px);border-color:rgba(201,162,75,.42);background:rgba(255,255,255,.045)}
+  .card .tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;
+    color:var(--gold2);margin-bottom:15px}
+  .card .ic{width:48px;height:48px;border-radius:12px;display:grid;place-items:center;font-size:24px;margin-bottom:16px;
+    background:rgba(255,255,255,.05);border:1px solid var(--line)}
+  .card h3{font-size:21px;font-weight:800;letter-spacing:-.3px;margin-bottom:9px}
+  .card p{color:var(--muted);font-size:14.5px;margin-bottom:18px;flex:1}
+  .card .link{font-size:13.5px;font-weight:700;color:var(--ink);display:inline-flex;align-items:center;gap:6px}
+  .card .status{font-size:11px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:#54e39b;margin-left:auto}
+  .card .arrow{transition:transform .15s}
+  .card:hover .arrow{transform:translateX(3px)}
+  .card .cardtop{display:flex;align-items:center;gap:10px}
+
+  /* about */
+  .about{display:grid;grid-template-columns:1.2fr 1fr;gap:44px;align-items:start}
+  @media(max-width:780px){.about{grid-template-columns:1fr;gap:26px}}
+  .about p{color:var(--muted);font-size:16px;margin-bottom:16px}
+  .facts{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:8px 24px}
+  .facts .row{display:flex;justify-content:space-between;gap:16px;padding:17px 0;border-bottom:1px solid var(--line);font-size:14.5px}
+  .facts .row:last-child{border-bottom:none}
+  .facts .row span{color:var(--faint)}
+  .facts .row b{font-weight:700;text-align:right}
+
+  /* contact */
+  .contact{text-align:center;background:linear-gradient(180deg,rgba(201,162,75,.10),transparent);
+    border:1px solid var(--line);border-radius:24px;padding:58px 30px}
+  .contact h2{font-family:var(--serif);font-size:clamp(26px,4vw,34px);font-weight:700;letter-spacing:-.3px;margin-bottom:12px}
+  .contact p{color:var(--muted);max-width:54ch;margin:0 auto 24px}
+  .cinfo{display:flex;gap:26px;justify-content:center;flex-wrap:wrap;margin-top:22px;color:var(--muted);font-size:14px}
+  .cinfo a{color:var(--ink);font-weight:600}
+  .cinfo span{display:inline-flex;align-items:center;gap:8px}
+
+  /* footer */
+  footer{border-top:1px solid var(--line);margin-top:44px;padding:34px 0}
+  .foot{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;color:var(--faint);font-size:13.5px}
+  .foot a{color:var(--muted)}
+  .foot a:hover{color:var(--ink)}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <div class="brand">
+      <div class="logo">T47</div>
+      <div>T47 Group <small>Holding Company</small></div>
+    </div>
+    <nav class="links">
+      <a href="#portfolio">Portfolio</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a class="btn" href="#contact">Get in touch</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <span class="eyebrow">Phoenix, Arizona</span>
+      <h1>A holding company building <span class="grad">what's next.</span></h1>
+      <p class="lede">T47 Group builds, operates, and invests in a portfolio of companies across technology, staffing, and consumer products — turning ideas into ventures that stand on their own.</p>
+      <div class="cta-row">
+        <a class="btn" href="#portfolio">View portfolio</a>
+        <a class="btn ghost" href="#contact">Get in touch</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="k">Portfolio</div>
+        <h2>Our companies</h2>
+        <p>A group of ventures spanning software, gaming, fintech, and workforce services.</p>
+      </div>
+      <div class="grid">
+
+        <a class="card" href="https://xsatorilabs.net" target="_blank" rel="noopener">
+          <span class="tag">Software Studio</span>
+          <div class="cardtop"><div class="ic">🧪</div><span class="status">● Live</span></div>
+          <h3>Xsatori Labs</h3>
+          <p>An independent B2B &amp; C2C software studio building apps, marketplaces, blockchain products, and internal software hubs.</p>
+          <span class="link">xsatorilabs.net <span class="arrow">→</span></span>
+        </a>
+
+        <a class="card" href="https://hookahroyale.com" target="_blank" rel="noopener">
+          <span class="tag">Consumer · Gaming</span>
+          <div class="cardtop"><div class="ic">🃏</div><span class="status">● Live</span></div>
+          <h3>Hookah Royale</h3>
+          <p>A social card-game lounge — Kon Khan, 31, Texas Hold'em, and Blackjack — built to play with friends on web and mobile.</p>
+          <span class="link">hookahroyale.com <span class="arrow">→</span></span>
+        </a>
+
+        <a class="card" href="https://xsatori.com" target="_blank" rel="noopener">
+          <span class="tag">Fintech · Marketplace</span>
+          <div class="cardtop"><div class="ic">📈</div><span class="status">● Live</span></div>
+          <h3>Xsatori</h3>
+          <p>A sports-investing marketplace — trade positions on the games and athletes you follow, with the depth of a real exchange.</p>
+          <span class="link">xsatori.com <span class="arrow">→</span></span>
+        </a>
+
+        <a class="card" href="https://www.flatstaffing.com" target="_blank" rel="noopener">
+          <span class="tag">Staffing · Workforce</span>
+          <div class="cardtop"><div class="ic">👷</div><span class="status">● Live</span></div>
+          <h3>Flatstaffing</h3>
+          <p>Premium general labor and consulting — specialized staffing across automotive, warehouse, and construction.</p>
+          <span class="link">flatstaffing.com <span class="arrow">→</span></span>
+        </a>
+
+        <a class="card" href="https://www.ninomihilli.com" target="_blank" rel="noopener">
+          <span class="tag">Founder · Personal Brand</span>
+          <div class="cardtop"><div class="ic">⭐</div><span class="status">● Live</span></div>
+          <h3>Nino Mihilli</h3>
+          <p>Founder, operator, and investor — the personal brand behind the T47 Group portfolio.</p>
+          <span class="link">ninomihilli.com <span class="arrow">→</span></span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap about">
+      <div>
+        <div class="sec-head" style="margin-bottom:20px">
+          <div class="k">About</div>
+          <h2>Built to build.</h2>
+        </div>
+        <p>T47 Group is a Phoenix-based holding company. We start, operate, and back companies across technology, staffing, and consumer products — bringing capital, systems, and hands-on operating experience to each one.</p>
+        <p>Our approach is simple: build things that last. Whether it's a software studio, a consumer app, a marketplace, or a workforce business, we treat every venture as a company meant to stand on its own — with real customers, real revenue, and room to grow.</p>
+        <p>From first idea to launch and beyond, the group shares design, engineering, and operating muscle across the portfolio, so each company moves faster than it could alone.</p>
+      </div>
+      <div class="facts">
+        <div class="row"><span>Entity</span><b>T47 Group</b></div>
+        <div class="row"><span>Based in</span><b>Phoenix, AZ</b></div>
+        <div class="row"><span>Founder</span><b>Nino Mihilli</b></div>
+        <div class="row"><span>Focus</span><b>Tech · Staffing · Consumer · Investments</b></div>
+        <div class="row"><span>Portfolio</span><b>5 companies</b></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <div class="contact">
+        <h2>Let's talk.</h2>
+        <p>Partnerships, ventures, or a company you think belongs in the group? We'd love to hear from you.</p>
+        <a class="btn" href="mailto:info@t47group.com">info@t47group.com</a>
+        <div class="cinfo">
+          <span>✉︎ <a href="mailto:info@t47group.com">info@t47group.com</a></span>
+          <span>✆ <a href="tel:+16028994006">602-899-4006</a></span>
+          <span>⌖ 4015 N 15th Ave, Phoenix, AZ 85015</span>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>© 2026 T47 Group · Phoenix, AZ · All rights reserved.</div>
+    <div><a href="mailto:info@t47group.com">Contact</a></div>
+  </div>
+</footer>
+</body>
+</html>
