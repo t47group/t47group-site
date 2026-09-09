@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://t47group.com/sitemap.xml
