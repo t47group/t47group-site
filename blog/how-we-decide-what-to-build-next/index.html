@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>How we decide what to build next — T47 Group</title>
+<meta name="description" content="Everyone has more ideas than capacity. Here are the four filters we run a new venture through before it gets a dollar or a developer." />
+<link rel="canonical" href="https://t47group.com/blog/how-we-decide-what-to-build-next/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="How we decide what to build next — T47 Group" />
+<meta property="og:description" content="Everyone has more ideas than capacity. Here are the four filters we run a new venture through before it gets a dollar or a developer." />
+<meta property="og:url" content="https://t47group.com/blog/how-we-decide-what-to-build-next/" />
+<meta property="og:site_name" content="T47 Group" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="How we decide what to build next — T47 Group" />
+<meta name="twitter:description" content="Everyone has more ideas than capacity. Here are the four filters we run a new venture through before it gets a dollar or a developer." />
+<link rel="alternate" type="application/rss+xml" title="T47 Group — Insights" href="https://t47group.com/rss.xml" />
+<style>:root{--bg:#0a0a0c;--bg2:#101013;--ink:#f3f1ea;--muted:#a5a08f;--faint:#6f6a5c;--line:rgba(255,255,255,.09);--card:rgba(255,255,255,.03);--accent:#c9a24b;--accent2:#e6c876;--prose:#d9d6cc;--serif:Georgia,'Times New Roman',ui-serif,serif}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased;
+background-image:radial-gradient(900px 520px at 82% -12%, rgba(201,162,75,.14), transparent 62%),radial-gradient(760px 520px at -5% 8%, rgba(138,151,168,.08), transparent 58%);background-attachment:fixed}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:760px;margin:0 auto;padding:0 26px}
+header{position:sticky;top:0;z-index:10;backdrop-filter:blur(10px);background:rgba(10,10,12,.74);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:70px;max-width:1120px;margin:0 auto;padding:0 26px}
+.brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.3px;font-size:17px}
+.logo{width:40px;height:40px;border-radius:10px;display:grid;place-items:center;font-family:var(--serif);font-weight:700;font-size:15px;color:#0a0a0c;background:linear-gradient(135deg,#e6c876,#c9a24b);box-shadow:0 10px 30px rgba(201,162,75,.32)}
+.brand small{display:block;color:var(--muted);font-weight:600;font-size:11px;letter-spacing:1.4px;text-transform:uppercase;margin-top:2px}
+nav .links{display:flex;gap:28px;align-items:center}
+nav .links a{color:var(--muted);font-size:14.5px;font-weight:600;transition:color .15s}
+nav .links a:hover{color:var(--ink)}
+nav .links a.on{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:10px;font-weight:700;font-size:14px;background:linear-gradient(135deg,#e6c876,#c9a24b);color:#0a0a0c;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-1px);box-shadow:0 10px 30px rgba(201,162,75,.32)}
+@media(max-width:760px){nav .links a:not(.btn){display:none}}
+.phead{padding:74px 0 34px;border-bottom:1px solid var(--line)}
+.kicker{font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--accent2);margin-bottom:18px;display:block}
+h1{font-family:var(--serif);font-size:clamp(30px,5vw,48px);line-height:1.1;font-weight:700;letter-spacing:-.5px;margin-bottom:18px}
+.meta{color:var(--faint);font-size:13.5px;display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.meta .dot{opacity:.5}
+article{padding:38px 0 20px;font-size:17px}
+article p{margin-bottom:22px;color:var(--prose)}
+article h2{font-family:var(--serif);font-size:clamp(22px,3.4vw,29px);font-weight:700;letter-spacing:-.3px;margin:42px 0 16px}
+article h3{font-size:19px;font-weight:800;margin:30px 0 12px}
+article ul,article ol{margin:0 0 22px 22px;color:var(--prose)}
+article li{margin-bottom:9px}
+article a{color:var(--accent2);border-bottom:1px solid var(--line)}
+article a:hover{border-bottom-color:var(--accent2)}
+article blockquote{border-left:3px solid var(--accent);padding:4px 0 4px 20px;margin:0 0 22px;color:var(--muted);font-style:italic}
+article code{background:var(--card);border:1px solid var(--line);border-radius:5px;padding:2px 6px;font-size:14.5px}
+article hr{border:none;border-top:1px solid var(--line);margin:34px 0}
+article strong{color:var(--ink)}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin:34px 0 0}
+.tag{font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--accent2);border:1px solid var(--line);border-radius:999px;padding:6px 12px;background:var(--card)}
+.bio{display:flex;gap:16px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;margin:38px 0 0}
+.bio .av{width:46px;height:46px;border-radius:50%;flex:none;display:grid;place-items:center;font-family:var(--serif);font-weight:700;color:#0a0a0c;background:linear-gradient(135deg,#e6c876,#c9a24b)}
+.bio b{font-size:15px}
+.bio p{color:var(--muted);font-size:14px;margin:5px 0 0}
+.bio a{color:var(--accent2)}
+.postlist{padding:14px 0 40px}
+.item{display:block;border-bottom:1px solid var(--line);padding:26px 0;transition:opacity .15s}
+.item:hover{opacity:.82}
+.item .d{font-size:12.5px;color:var(--faint);letter-spacing:.4px;margin-bottom:9px}
+.item h2{font-family:var(--serif);font-size:clamp(20px,3vw,26px);font-weight:700;letter-spacing:-.3px;margin-bottom:9px}
+.item p{color:var(--muted);font-size:15px}
+.item .more{display:inline-block;margin-top:12px;font-size:13.5px;font-weight:700;color:var(--accent2)}
+.cta{text-align:center;background:linear-gradient(180deg,rgba(201,162,75,.10),transparent);border:1px solid var(--line);border-radius:22px;padding:46px 28px;margin:46px 0}
+.cta h2{font-family:var(--serif);font-size:clamp(23px,3.6vw,31px);font-weight:700;margin-bottom:11px}
+.cta p{color:var(--muted);max-width:52ch;margin:0 auto 22px}
+footer{border-top:1px solid var(--line);margin-top:40px;padding:32px 0}
+.foot{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;color:var(--faint);font-size:13.5px;max-width:1120px;margin:0 auto;padding:0 26px}
+.foot a{color:var(--muted)} .foot a:hover{color:var(--ink)}
+.backlink{display:inline-block;margin:26px 0 0;font-size:14px;color:var(--muted);font-weight:600}</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "BlogPosting", "headline": "How we decide what to build next", "description": "Everyone has more ideas than capacity. Here are the four filters we run a new venture through before it gets a dollar or a developer.", "datePublished": "2026-09-14", "dateModified": "2026-09-14", "url": "https://t47group.com/blog/how-we-decide-what-to-build-next/", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://t47group.com/blog/how-we-decide-what-to-build-next/"}, "author": {"@type": "Person", "name": "Nino Mihilli", "url": "https://www.ninomihilli.com", "jobTitle": "Founder & Managing Partner, T47 Group", "sameAs": ["https://www.ninomihilli.com", "https://t47group.com", "https://xsatorilabs.net"]}, "publisher": {"@type": "Organization", "name": "T47 Group", "url": "https://t47group.com/", "sameAs": ["https://xsatorilabs.net", "https://www.flatstaffing.com", "https://www.ninomihilli.com"], "founder": {"@type": "Person", "name": "Nino Mihilli", "url": "https://www.ninomihilli.com", "jobTitle": "Founder & Managing Partner, T47 Group", "sameAs": ["https://www.ninomihilli.com", "https://t47group.com", "https://xsatorilabs.net"]}}, "keywords": "Strategy, Capital Allocation, Operating Philosophy", "inLanguage": "en-US"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://t47group.com/"}, {"@type": "ListItem", "position": 2, "name": "Insights", "item": "https://t47group.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "How we decide what to build next", "item": "https://t47group.com/blog/how-we-decide-what-to-build-next/"}]}]}</script>
+</head>
+<body>
+<header><div class="nav">
+  <a class="brand" href="https://t47group.com/">
+    <div class="logo">T47</div>
+    <div>T47 Group <small>Holding Company</small></div>
+  </a>
+  <nav class="links">
+    <a href="https://t47group.com/#portfolio">Portfolio</a><a href="https://t47group.com/#about">About</a><a href="https://t47group.com/#contact">Contact</a>
+    <a class="on" href="https://t47group.com/blog/">Insights</a>
+    <a class="btn" href="https://t47group.com/#contact">Get in touch</a>
+  </nav>
+</div></header>
+<main>
+<div class="wrap phead">
+  <span class="kicker">Operating Philosophy</span>
+  <h1>How we decide what to build next</h1>
+  <div class="meta"><span>Nino Mihilli</span><span class="dot">·</span>
+  <time datetime="2026-09-14">September 14, 2026</time>
+  <span class="dot">·</span><span>3 min read</span></div>
+</div>
+<div class="wrap"><article><p>The constraint in a holding company is never ideas. It is attention. There are always more things worth building than there are people to build them, and the real job is deciding what does not get done.</p>
+<p>Here is what we actually run a new venture through.</p>
+<h2>Filter one: does it use something we already have?</h2>
+<p>The entire argument for a portfolio is that the pieces make each other cheaper. If a new venture does not draw on existing capability, we are not a holding company — we are one person with several unrelated jobs.</p>
+<p>So: does this use engineering we already have? Design? An operating system we have already built? A customer relationship, a distribution channel, an understanding of a market we already paid to learn?</p>
+<p>A venture that shares nothing has to be dramatically better than one that shares a lot, because it is carrying its full cost alone. Most ideas that fail this filter are good ideas for someone else.</p>
+<h2>Filter two: who runs it on day two hundred?</h2>
+<p>This is the filter that kills the most, and it is the one founders skip.</p>
+<p>Every new venture is exciting for about ninety days. Then it becomes a job — with customers, edge cases, and a hundred small decisions nobody finds interesting. If I cannot name the person who is doing that job, I am not evaluating a venture. I am evaluating a hobby that will consume my attention until it dies.</p>
+<p>The answer cannot be "we'll hire someone." That is a plan to have a plan. Either there is a person, or the venture waits until there is.</p>
+<h2>Filter three: what does it cost to be wrong?</h2>
+<p>Not what it costs to build — what it costs to be wrong. Those are different numbers and the second one is what matters.</p>
+<p>Some bets are wrong cheaply. You spend a defined amount, learn the market is not there, and stop. Others are wrong expensively: they take eighteen months to disprove, absorb attention the whole time, and by the time you know, you have paid for the answer several times over.</p>
+<p>I will take a lot of the first kind. I am very cautious about the second. The question I ask is not "how confident am I?" but "how fast and how cheaply will I find out I was wrong?" A venture with a fast, cheap failure mode is worth trying at much lower confidence than one that takes two years to reveal itself.</p>
+<h2>Filter four: would I be happy owning it in ten years?</h2>
+<p>We hold. So this is not abstract.</p>
+<p>Some businesses are profitable and miserable — legally fraught, structurally adversarial to their customers, or dependent on something I would not want to explain. The money is real and so is living with it every day for a decade.</p>
+<p>This filter has cost us opportunities that would have made money. I have never regretted applying it.</p>
+<h2>What we do not use as a filter</h2>
+<p><strong>Market size.</strong> Big markets attract everyone. We have done better in markets too small or unglamorous for well-funded competitors to bother with. <a href="https://www.flatstaffing.com">Flatstaffing</a> is not a category anyone writes about, and it funds things that are.</p>
+<p><strong>Whether it's exciting.</strong> Excitement is a terrible signal. It correlates with novelty, and novelty correlates with not understanding the problem yet. Some of the best things we own were boring on the day we started them.</p>
+<p><strong>Whether I could raise money for it.</strong> Fundraisability measures what a particular kind of investor is currently interested in. That is useful information about investors and almost none about the business.</p>
+<h2>The order matters</h2>
+<p>Run them in sequence. Most ideas die on filter two — I cannot name the operator — and that is the cheapest possible place to kill something, before anyone has spent a dollar or fallen in love with it.</p>
+<p>The ideas that survive all four are rarer than you would think. Right now that is <a href="https://t47group.com/#portfolio">five companies</a>, and every one of them shares engineering, design, or operating capability with at least one other.</p>
+<p>The rest of the ideas are written down. Some of them will pass in three years when there is a person to run them. Most never will, and that is the filter working.</p></article>
+<div class="tags"><span class="tag">Strategy</span><span class="tag">Capital Allocation</span><span class="tag">Operating Philosophy</span></div>
+<div class="bio"><div class="av">NM</div>
+        <div><b>Nino Mihilli</b><p>Founder and operator. Twenty years scaling and exiting businesses across staffing, software, and consumer products. Based in Phoenix, Arizona. <a href="https://www.ninomihilli.com">www.ninomihilli.com</a></p></div></div>
+<div class="cta"><h2>Building something that belongs in the group?</h2><p>Partnerships, ventures, or a company you think fits the portfolio — we'd love to hear from you.</p>
+      <a class="btn" href="https://t47group.com/#contact">Get in touch</a></div>
+      <a class="backlink" href="https://t47group.com/blog/">← All insights</a></div>
+</main>
+<footer><div class="foot">
+  <div>© 2026 T47 Group · Phoenix, AZ · All rights reserved.</div>
+  <div><a href="https://t47group.com/#portfolio">Portfolio</a> · <a href="https://t47group.com/blog/">Insights</a> · <a href="mailto:info@t47group.com">Contact</a></div>
+</div></footer>
+</body>
+</html>
