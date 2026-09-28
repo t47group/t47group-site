@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>What twenty years of scaling and exiting actually teaches you — T47 Group</title>
+<meta name="description" content="Not the lessons you expect. The useful ones are smaller, less quotable, and mostly about cash, people, and how long things really take." />
+<link rel="canonical" href="https://t47group.com/blog/twenty-years-of-scaling-and-exiting/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="What twenty years of scaling and exiting actually teaches you — T47 Group" />
+<meta property="og:description" content="Not the lessons you expect. The useful ones are smaller, less quotable, and mostly about cash, people, and how long things really take." />
+<meta property="og:url" content="https://t47group.com/blog/twenty-years-of-scaling-and-exiting/" />
+<meta property="og:site_name" content="T47 Group" />
+<meta property="og:image" content="https://t47group.com/og-image.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://t47group.com/og-image.png" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<meta name="twitter:title" content="What twenty years of scaling and exiting actually teaches you — T47 Group" />
+<meta name="twitter:description" content="Not the lessons you expect. The useful ones are smaller, less quotable, and mostly about cash, people, and how long things really take." />
+<link rel="alternate" type="application/rss+xml" title="T47 Group — Insights" href="https://t47group.com/rss.xml" />
+<style>:root{--bg:#0a0a0c;--bg2:#101013;--ink:#f3f1ea;--muted:#a5a08f;--faint:#6f6a5c;--line:rgba(255,255,255,.09);--card:rgba(255,255,255,.03);--accent:#c9a24b;--accent2:#e6c876;--prose:#d9d6cc;--serif:Georgia,'Times New Roman',ui-serif,serif}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased;
+background-image:radial-gradient(900px 520px at 82% -12%, rgba(201,162,75,.14), transparent 62%),radial-gradient(760px 520px at -5% 8%, rgba(138,151,168,.08), transparent 58%);background-attachment:fixed}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:760px;margin:0 auto;padding:0 26px}
+header{position:sticky;top:0;z-index:10;backdrop-filter:blur(10px);background:rgba(10,10,12,.74);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:70px;max-width:1120px;margin:0 auto;padding:0 26px}
+.brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.3px;font-size:17px}
+.logo{width:40px;height:40px;border-radius:10px;display:grid;place-items:center;font-family:var(--serif);font-weight:700;font-size:15px;color:#0a0a0c;background:linear-gradient(135deg,#e6c876,#c9a24b);box-shadow:0 10px 30px rgba(201,162,75,.32)}
+.brand small{display:block;color:var(--muted);font-weight:600;font-size:11px;letter-spacing:1.4px;text-transform:uppercase;margin-top:2px}
+nav .links{display:flex;gap:28px;align-items:center}
+nav .links a{color:var(--muted);font-size:14.5px;font-weight:600;transition:color .15s}
+nav .links a:hover{color:var(--ink)}
+nav .links a.on{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:10px;font-weight:700;font-size:14px;background:linear-gradient(135deg,#e6c876,#c9a24b);color:#0a0a0c;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-1px);box-shadow:0 10px 30px rgba(201,162,75,.32)}
+@media(max-width:760px){nav .links a:not(.btn){display:none}}
+.phead{padding:74px 0 34px;border-bottom:1px solid var(--line)}
+.kicker{font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--accent2);margin-bottom:18px;display:block}
+h1{font-family:var(--serif);font-size:clamp(30px,5vw,48px);line-height:1.1;font-weight:700;letter-spacing:-.5px;margin-bottom:18px}
+.meta{color:var(--faint);font-size:13.5px;display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.meta .dot{opacity:.5}
+article{padding:38px 0 20px;font-size:17px}
+article p{margin-bottom:22px;color:var(--prose)}
+article h2{font-family:var(--serif);font-size:clamp(22px,3.4vw,29px);font-weight:700;letter-spacing:-.3px;margin:42px 0 16px}
+article h3{font-size:19px;font-weight:800;margin:30px 0 12px}
+article ul,article ol{margin:0 0 22px 22px;color:var(--prose)}
+article li{margin-bottom:9px}
+article a{color:var(--accent2);border-bottom:1px solid var(--line)}
+article a:hover{border-bottom-color:var(--accent2)}
+article blockquote{border-left:3px solid var(--accent);padding:4px 0 4px 20px;margin:0 0 22px;color:var(--muted);font-style:italic}
+article code{background:var(--card);border:1px solid var(--line);border-radius:5px;padding:2px 6px;font-size:14.5px}
+article hr{border:none;border-top:1px solid var(--line);margin:34px 0}
+article strong{color:var(--ink)}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin:34px 0 0}
+.tag{font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--accent2);border:1px solid var(--line);border-radius:999px;padding:6px 12px;background:var(--card)}
+.bio{display:flex;gap:16px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;margin:38px 0 0}
+.bio .av{width:46px;height:46px;border-radius:50%;flex:none;display:grid;place-items:center;font-family:var(--serif);font-weight:700;color:#0a0a0c;background:linear-gradient(135deg,#e6c876,#c9a24b)}
+.bio b{font-size:15px}
+.bio p{color:var(--muted);font-size:14px;margin:5px 0 0}
+.bio a{color:var(--accent2)}
+.postlist{padding:14px 0 40px}
+.item{display:block;border-bottom:1px solid var(--line);padding:26px 0;transition:opacity .15s}
+.item:hover{opacity:.82}
+.item .d{font-size:12.5px;color:var(--faint);letter-spacing:.4px;margin-bottom:9px}
+.item h2{font-family:var(--serif);font-size:clamp(20px,3vw,26px);font-weight:700;letter-spacing:-.3px;margin-bottom:9px}
+.item p{color:var(--muted);font-size:15px}
+.item .more{display:inline-block;margin-top:12px;font-size:13.5px;font-weight:700;color:var(--accent2)}
+.cta{text-align:center;background:linear-gradient(180deg,rgba(201,162,75,.10),transparent);border:1px solid var(--line);border-radius:22px;padding:46px 28px;margin:46px 0}
+.cta h2{font-family:var(--serif);font-size:clamp(23px,3.6vw,31px);font-weight:700;margin-bottom:11px}
+.cta p{color:var(--muted);max-width:52ch;margin:0 auto 22px}
+footer{border-top:1px solid var(--line);margin-top:40px;padding:32px 0}
+.foot{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;color:var(--faint);font-size:13.5px;max-width:1120px;margin:0 auto;padding:0 26px}
+.foot a{color:var(--muted)} .foot a:hover{color:var(--ink)}
+.backlink{display:inline-block;margin:26px 0 0;font-size:14px;color:var(--muted);font-weight:600}</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "BlogPosting", "headline": "What twenty years of scaling and exiting actually teaches you", "description": "Not the lessons you expect. The useful ones are smaller, less quotable, and mostly about cash, people, and how long things really take.", "datePublished": "2026-09-28", "dateModified": "2026-09-28", "url": "https://t47group.com/blog/twenty-years-of-scaling-and-exiting/", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://t47group.com/blog/twenty-years-of-scaling-and-exiting/"}, "author": {"@type": "Person", "@id": "https://www.ninomihilli.com/#person", "name": "Nino Mihilli", "url": "https://www.ninomihilli.com", "jobTitle": "Founder & Managing Partner, T47 Group", "sameAs": ["https://www.ninomihilli.com", "https://t47group.com", "https://xsatorilabs.net"]}, "publisher": {"@type": "Organization", "@id": "https://t47group.com/#org", "name": "T47 Group", "url": "https://t47group.com/", "logo": "https://t47group.com/apple-touch-icon.png", "sameAs": ["https://xsatorilabs.net", "https://www.flatstaffing.com", "https://www.ninomihilli.com"], "founder": {"@type": "Person", "@id": "https://www.ninomihilli.com/#person", "name": "Nino Mihilli", "url": "https://www.ninomihilli.com", "jobTitle": "Founder & Managing Partner, T47 Group", "sameAs": ["https://www.ninomihilli.com", "https://t47group.com", "https://xsatorilabs.net"]}}, "keywords": "Operating Philosophy, Lessons, Leadership", "inLanguage": "en-US"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://t47group.com/"}, {"@type": "ListItem", "position": 2, "name": "Insights", "item": "https://t47group.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "What twenty years of scaling and exiting actually teaches you", "item": "https://t47group.com/blog/twenty-years-of-scaling-and-exiting/"}]}]}</script>
+</head>
+<body>
+<header><div class="nav">
+  <a class="brand" href="https://t47group.com/">
+    <div class="logo">T47</div>
+    <div>T47 Group <small>Holding Company</small></div>
+  </a>
+  <nav class="links">
+    <a href="https://t47group.com/#portfolio">Portfolio</a><a href="https://t47group.com/#about">About</a><a href="https://t47group.com/#contact">Contact</a>
+    <a class="on" href="https://t47group.com/blog/">Insights</a>
+    <a class="btn" href="https://t47group.com/#contact">Get in touch</a>
+  </nav>
+</div></header>
+<main>
+<div class="wrap phead">
+  <span class="kicker">Operating Philosophy</span>
+  <h1>What twenty years of scaling and exiting actually teaches you</h1>
+  <div class="meta"><span>Nino Mihilli</span><span class="dot">·</span>
+  <time datetime="2026-09-28">September 28, 2026</time>
+  <span class="dot">·</span><span>4 min read</span></div>
+</div>
+<div class="wrap"><article><p>People ask what twenty years of building teaches you, and I think they expect something about vision or risk tolerance.</p>
+<p>The real lessons are smaller than that and considerably less quotable. Here are the ones I would actually pass on.</p>
+<h2>Everything takes longer than the honest estimate</h2>
+<p>Not the optimistic estimate — the one you already adjusted for optimism. That one is short too.</p>
+<p>I no longer treat this as a planning failure to be corrected. I treat it as a property of reality and plan against it. Which means: assume the thing takes longer, make sure you can survive the longer version, and never build a plan that only works if the timeline holds.</p>
+<p>The corollary matters more. Because things take longer, <strong>you get fewer attempts than you think.</strong> A career is maybe six or seven real swings. That changes how carefully you choose them.</p>
+<h2>Cash and profit are different, and cash wins</h2>
+<p>Every experienced operator knows this and every inexperienced one learns it the hard way.</p>
+<p>A profitable business dies waiting on receivables. A business with thin margins and fast collection survives a long time. When those two conflict, watch cash. It is the one that determines whether you are still operating next month.</p>
+<p>This lesson comes cheap if you have run a labor business, where payroll is every Friday whether or not the client paid. It comes expensive otherwise.</p>
+<h2>Hiring slowly is real advice and almost nobody follows it</h2>
+<p>Everyone says hire slowly. Then a business is drowning, a candidate is available and adequate, and the pain of continuing understaffed is immediate while the cost of a mediocre hire is theoretical.</p>
+<p>So you hire them. And the cost turns out to be much higher than the pain you avoided — because a wrong hire in a small company is not neutral, they consume management attention, affect the people around them, and are difficult to remove.</p>
+<p>I have made this mistake more than once. Knowing the principle is not sufficient. What helped was deciding in advance what I would not compromise on, before I was desperate.</p>
+<h2>Most problems are one conversation that did not happen</h2>
+<p>Look backward at anything that went badly — a partnership, a client, an employee, a project — and there is usually an identifiable moment where a direct conversation would have changed the outcome, and instead everyone was polite.</p>
+<p>The discomfort of that conversation is always smaller than the cost of avoiding it. Always. I have never once had the hard conversation and thought afterward that silence would have been better.</p>
+<h2>Reputation is the only asset that compounds without maintenance</h2>
+<p>Every other asset requires upkeep. Reputation, once genuinely earned, works while you sleep and reaches places you will never visit.</p>
+<p>It is also the only one that can be destroyed in a single decision. Twenty years of doing right by people, undone by one situation you handled badly because it was expedient. I have watched this happen to people who were better operators than me.</p>
+<p>This is why I will take a worse commercial outcome to handle something correctly. It is not nobility. It is that the compounding asset is worth more than the transaction.</p>
+<h2>Second-order effects are where the money is</h2>
+<p>The obvious effect of a decision is rarely the important one.</p>
+<p>Cut a cost, and the visible savings arrive first. What follows: the process degrades, the customer notices, the good employee who cared leaves. The savings were real and the total effect was negative.</p>
+<p>Ask what happens next, and then what happens after that. Most bad decisions in business are good decisions evaluated one step too early.</p>
+<h2>What I got wrong for a long time</h2>
+<p>I held things too long. Not businesses — situations. A client relationship that had turned unprofitable and unpleasant. A partnership where the alignment had quietly ended. A venture that was not going to work and that I kept alive because stopping felt like failing.</p>
+<p>Persistence is genuinely a virtue and it is also the vice I am most prone to, and for years I could not tell the difference in the moment. What helped was writing down, in advance and while calm, what would make me stop. The version of me that is deep in something cannot be trusted to make that call fairly.</p>
+<h2>The one that matters most</h2>
+<p>The people you build with determine almost everything. More than the market, more than the idea, more than the timing.</p>
+<p>A good business with the wrong partner is miserable and usually ends badly. A hard business with the right people is survivable and frequently becomes good. I have been on both sides of that and it is not close.</p>
+<p>Choose carefully, take longer than feels necessary, and when it is not working, address it directly and early. Nearly everything else is recoverable.</p></article>
+<div class="tags"><span class="tag">Operating Philosophy</span><span class="tag">Lessons</span><span class="tag">Leadership</span></div>
+<div class="bio"><div class="av">NM</div>
+        <div><b>Nino Mihilli</b><p>Founder and operator. Twenty years scaling and exiting businesses across staffing, software, and consumer products. Based in Phoenix, Arizona. <a href="https://www.ninomihilli.com">www.ninomihilli.com</a></p></div></div>
+<div class="cta"><h2>Building something that belongs in the group?</h2><p>Partnerships, ventures, or a company you think fits the portfolio — we'd love to hear from you.</p>
+      <a class="btn" href="https://t47group.com/#contact">Get in touch</a></div>
+      <a class="backlink" href="https://t47group.com/blog/">← All insights</a></div>
+</main>
+<footer><div class="foot">
+  <div>© 2026 T47 Group · Phoenix, AZ · All rights reserved.</div>
+  <div><a href="https://t47group.com/#portfolio">Portfolio</a> · <a href="https://t47group.com/blog/">Insights</a> · <a href="mailto:info@t47group.com">Contact</a></div>
+</div></footer>
+</body>
+</html>
