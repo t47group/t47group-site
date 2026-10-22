@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Xsatori Labs | A T47 Group Company</title>
+<meta name="description" content="Xsatori Labs, the software studio of T47 Group: apps, platforms and AI solutions built for a fee or as a selective cash-and-equity venture partner." />
+<!-- This page mirrors xsatorilabs.net live, so the canonical stays on the original site -->
+<link rel="canonical" href="https://xsatorilabs.net/" />
+<link rel="icon" href="https://xsatorilabs.net/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="https://xsatorilabs.net/apple-touch-icon.png" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Xsatori Labs | A T47 Group Company" />
+<meta property="og:description" content="The software studio of T47 Group: apps, platforms and AI solutions, built for a fee or as a venture partner." />
+<meta property="og:url" content="https://t47group.com/xlabs/" />
+<meta property="og:image" content="https://xsatorilabs.net/og-image.png" />
+<style>
+  html,body{margin:0;background:#0a0b10}
+  #t47bar{position:relative;z-index:20;background:#0a0a0c;border-bottom:1px solid rgba(201,162,75,.28);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif}
+  #t47bar .t47in{max-width:1080px;margin:0 auto;padding:10px 24px;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
+  #t47bar a{color:#e6c876;text-decoration:none;font-weight:700;font-size:13.5px}
+  #t47bar a:hover{color:#f3f1ea}
+  #t47bar .t47lbl{color:#a5a08f;font-size:13px}
+  #t47bar .t47lbl b{color:#f3f1ea}
+  #xl-loading{max-width:760px;margin:80px auto;padding:0 24px;text-align:center;color:#9aa0b4;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif}
+  #xl-loading a{color:#31d0c6}
+</style>
+</head>
+<body>
+<div id="t47bar">
+  <div class="t47in">
+    <a href="/">&larr; T47 Group</a>
+    <span class="t47lbl"><b>Xsatori Labs</b> &middot; a T47 Group company</span>
+    <a href="https://xsatorilabs.net/" target="_blank" rel="noopener">xsatorilabs.net &nearr;</a>
+  </div>
+</div>
+<div id="xl-root">
+  <div id="xl-loading">
+    <p>Loading Xsatori Labs&hellip;</p>
+    <noscript><p>Visit <a href="https://xsatorilabs.net/">xsatorilabs.net</a> to see our work.</p></noscript>
+  </div>
+</div>
+<script>
+// Pulls the live xsatorilabs.net homepage into this page, so any update to
+// xsatorilabs.net shows up here automatically with no second copy to maintain.
+(function () {
+  var SRC = 'https://xsatorilabs.net';
+  var root = document.getElementById('xl-root');
+  function fail() {
+    root.innerHTML = '<div id="xl-loading"><p>We couldn\'t load this page right now.</p>' +
+      '<p><a href="' + SRC + '/">Visit xsatorilabs.net</a></p></div>';
+  }
+  fetch(SRC + '/', { cache: 'no-cache' })
+    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.text(); })
+    .then(function (html) {
+      var doc = new DOMParser().parseFromString(html, 'text/html');
+      doc.querySelectorAll('head style').forEach(function (s) {
+        document.head.appendChild(s.cloneNode(true));
+      });
+      doc.body.querySelectorAll('script').forEach(function (s) { s.remove(); });
+      doc.body.querySelectorAll('[href],[src]').forEach(function (el) {
+        ['href', 'src'].forEach(function (a) {
+          var v = el.getAttribute(a);
+          if (v && v.charAt(0) === '/' && v.charAt(1) !== '/') el.setAttribute(a, SRC + v);
+        });
+      });
+      // Links that leave the homepage (other xsatorilabs.net pages) open on xsatorilabs.net
+      doc.body.querySelectorAll('a[href^="' + SRC + '"]').forEach(function (a) {
+        a.setAttribute('target', '_blank');
+        a.setAttribute('rel', 'noopener');
+      });
+      root.innerHTML = doc.body.innerHTML;
+      if (location.hash) {
+        var t = document.getElementById(location.hash.slice(1));
+        if (t) t.scrollIntoView();
+      }
+    })
+    .catch(fail);
+})();
+</script>
+</body>
+</html>
