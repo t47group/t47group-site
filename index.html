@@ -51,13 +51,14 @@
   .logo{width:40px;height:40px;border-radius:10px;display:grid;place-items:center;font-family:var(--serif);font-weight:700;font-size:15px;letter-spacing:.5px;color:#0a0a0c;
     background:linear-gradient(135deg,var(--gold2),var(--gold));box-shadow:0 6px 22px rgba(201,162,75,.34)}
   .brand small{display:block;color:var(--muted);font-weight:600;font-size:11px;letter-spacing:1.4px;text-transform:uppercase;margin-top:2px}
-  nav .links{display:flex;gap:28px;align-items:center}
-  nav .links a{color:var(--muted);font-size:14.5px;font-weight:600;transition:color .15s}
-  nav .links a:hover{color:var(--ink)}
+  nav.links{display:flex;gap:28px;align-items:center}
+  nav.links a{color:var(--muted);font-size:14.5px;font-weight:600;transition:color .15s}
+  nav.links a:hover{color:var(--ink)}
+  nav.links a.btn,nav.links a.btn:hover{color:#0a0a0c;margin-left:4px}
   .btn{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:10px;font-weight:700;font-size:14px;
     background:linear-gradient(135deg,var(--gold2),var(--gold));color:#0a0a0c;transition:transform .15s,box-shadow .15s}
   .btn:hover{transform:translateY(-1px);box-shadow:0 10px 30px rgba(201,162,75,.32)}
-  @media(max-width:660px){nav .links{display:none}}
+  @media(max-width:760px){nav.links a:not(.btn){display:none}}
 
   /* hero */
   .hero{padding:120px 0 78px;text-align:center}
