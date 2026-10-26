@@ -1,0 +1,22 @@
+# T47 Group
+
+> T47 Group is a Phoenix, Arizona holding company founded by Nino Mihilli. It builds, operates and invests in companies across technology, staffing and consumer products, and shares design, engineering and operating support across its portfolio.
+
+- Founder: Nino Mihilli (https://www.ninomihilli.com)
+- Location: 4015 N 15th Ave, Phoenix, AZ 85015
+- Email: info@t47group.com
+- Phone: 602-899-4006
+
+## Portfolio
+
+- [Xsatori Labs](https://xsatorilabs.net): Phoenix software studio that builds apps, marketplaces, blockchain products and internal business software, for a fee or as a selective cash-and-equity venture partner. Also shown at https://t47group.com/xlabs/
+- [Hookah Royale](https://hookahroyale.com): Social card-game lounge (Kon Khan, 31, Texas Hold'em, Blackjack) for web and mobile.
+- [Xsatori](https://xsatori.com): Sports-investing marketplace for trading positions on games and athletes.
+- [FLAT Staffing](https://www.flatstaffing.com): Front Line All Temps, a Phoenix staffing company for warehouse, automotive, auto auction and general labor work.
+- [Nino Mihilli](https://www.ninomihilli.com): Founder's personal site on entrepreneurship and faith-driven leadership.
+
+## Pages
+
+- [Home](https://t47group.com/): Overview of T47 Group, its portfolio and contact details.
+- [Xsatori Labs](https://t47group.com/xlabs/): The group's software studio.
+- [Insights](https://t47group.com/blog/): Operator notes on building, operating and investing from the T47 Group portfolio.
