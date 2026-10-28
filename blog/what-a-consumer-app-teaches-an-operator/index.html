@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>What a consumer app teaches a B2B operator — T47 Group</title>
+<meta name="description" content="Lessons from launching Hookah Royale, a consumer mobile app, after years in B2B services: retention, paid acquisition, and why feedback arrives faster." />
+<link rel="canonical" href="https://t47group.com/blog/what-a-consumer-app-teaches-an-operator/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="What a consumer app teaches a B2B operator — T47 Group" />
+<meta property="og:description" content="Lessons from launching Hookah Royale, a consumer mobile app, after years in B2B services: retention, paid acquisition, and why feedback arrives faster." />
+<meta property="og:url" content="https://t47group.com/blog/what-a-consumer-app-teaches-an-operator/" />
+<meta property="og:site_name" content="T47 Group" />
+<meta property="og:image" content="https://t47group.com/og-image.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://t47group.com/og-image.png" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<meta name="twitter:title" content="What a consumer app teaches a B2B operator — T47 Group" />
+<meta name="twitter:description" content="Lessons from launching Hookah Royale, a consumer mobile app, after years in B2B services: retention, paid acquisition, and why feedback arrives faster." />
+<link rel="alternate" type="application/rss+xml" title="T47 Group — Insights" href="https://t47group.com/rss.xml" />
+<style>:root{--bg:#0a0a0c;--bg2:#101013;--ink:#f3f1ea;--muted:#a5a08f;--faint:#6f6a5c;--line:rgba(255,255,255,.09);--card:rgba(255,255,255,.03);--accent:#c9a24b;--accent2:#e6c876;--prose:#d9d6cc;--serif:Georgia,'Times New Roman',ui-serif,serif}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased;
+background-image:radial-gradient(900px 520px at 82% -12%, rgba(201,162,75,.14), transparent 62%),radial-gradient(760px 520px at -5% 8%, rgba(138,151,168,.08), transparent 58%);background-attachment:fixed}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:760px;margin:0 auto;padding:0 26px}
+header{position:sticky;top:0;z-index:10;backdrop-filter:blur(10px);background:rgba(10,10,12,.74);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:70px;max-width:1120px;margin:0 auto;padding:0 26px}
+.brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.3px;font-size:17px}
+.logo{width:40px;height:40px;border-radius:10px;display:grid;place-items:center;font-family:var(--serif);font-weight:700;font-size:15px;color:#0a0a0c;background:linear-gradient(135deg,#e6c876,#c9a24b);box-shadow:0 10px 30px rgba(201,162,75,.32)}
+.brand small{display:block;color:var(--muted);font-weight:600;font-size:11px;letter-spacing:1.4px;text-transform:uppercase;margin-top:2px}
+nav.links{display:flex;gap:28px;align-items:center}
+nav.links a{color:var(--muted);font-size:14.5px;font-weight:600;transition:color .15s}
+nav.links a:hover{color:var(--ink)}
+nav.links a.on{color:var(--ink)}
+nav.links a.btn,nav.links a.btn:hover{color:#0a0a0c}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:10px;font-weight:700;font-size:14px;background:linear-gradient(135deg,#e6c876,#c9a24b);color:#0a0a0c;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-1px);box-shadow:0 10px 30px rgba(201,162,75,.32)}
+@media(max-width:760px){nav.links a:not(.btn){display:none}}
+.phead{padding:74px 0 34px;border-bottom:1px solid var(--line)}
+.kicker{font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--accent2);margin-bottom:18px;display:block}
+h1{font-family:var(--serif);font-size:clamp(30px,5vw,48px);line-height:1.1;font-weight:700;letter-spacing:-.5px;margin-bottom:18px}
+.meta{color:var(--faint);font-size:13.5px;display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.meta .dot{opacity:.5}
+article{padding:38px 0 20px;font-size:17px}
+article p{margin-bottom:22px;color:var(--prose)}
+article h2{font-family:var(--serif);font-size:clamp(22px,3.4vw,29px);font-weight:700;letter-spacing:-.3px;margin:42px 0 16px}
+article h3{font-size:19px;font-weight:800;margin:30px 0 12px}
+article ul,article ol{margin:0 0 22px 22px;color:var(--prose)}
+article li{margin-bottom:9px}
+article a{color:var(--accent2);border-bottom:1px solid var(--line)}
+article a:hover{border-bottom-color:var(--accent2)}
+article blockquote{border-left:3px solid var(--accent);padding:4px 0 4px 20px;margin:0 0 22px;color:var(--muted);font-style:italic}
+article code{background:var(--card);border:1px solid var(--line);border-radius:5px;padding:2px 6px;font-size:14.5px}
+article hr{border:none;border-top:1px solid var(--line);margin:34px 0}
+article strong{color:var(--ink)}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin:34px 0 0}
+.tag{font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--accent2);border:1px solid var(--line);border-radius:999px;padding:6px 12px;background:var(--card)}
+.bio{display:flex;gap:16px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;margin:38px 0 0}
+.bio .av{width:46px;height:46px;border-radius:50%;flex:none;display:grid;place-items:center;font-family:var(--serif);font-weight:700;color:#0a0a0c;background:linear-gradient(135deg,#e6c876,#c9a24b)}
+.bio b{font-size:15px}
+.bio p{color:var(--muted);font-size:14px;margin:5px 0 0}
+.bio a{color:var(--accent2)}
+.postlist{padding:14px 0 40px}
+.item{display:block;border-bottom:1px solid var(--line);padding:26px 0;transition:opacity .15s}
+.item:hover{opacity:.82}
+.item .d{font-size:12.5px;color:var(--faint);letter-spacing:.4px;margin-bottom:9px}
+.item h2{font-family:var(--serif);font-size:clamp(20px,3vw,26px);font-weight:700;letter-spacing:-.3px;margin-bottom:9px}
+.item p{color:var(--muted);font-size:15px}
+.item .more{display:inline-block;margin-top:12px;font-size:13.5px;font-weight:700;color:var(--accent2)}
+.cta{text-align:center;background:linear-gradient(180deg,rgba(201,162,75,.10),transparent);border:1px solid var(--line);border-radius:22px;padding:46px 28px;margin:46px 0}
+.cta h2{font-family:var(--serif);font-size:clamp(23px,3.6vw,31px);font-weight:700;margin-bottom:11px}
+.cta p{color:var(--muted);max-width:52ch;margin:0 auto 22px}
+footer{border-top:1px solid var(--line);margin-top:40px;padding:32px 0}
+.foot{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;color:var(--faint);font-size:13.5px;max-width:1120px;margin:0 auto;padding:0 26px}
+.foot a{color:var(--muted)} .foot a:hover{color:var(--ink)}
+.backlink{display:inline-block;margin:26px 0 0;font-size:14px;color:var(--muted);font-weight:600}</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "BlogPosting", "headline": "What a consumer app teaches a B2B operator", "description": "Lessons from launching Hookah Royale, a consumer mobile app, after years in B2B services: retention, paid acquisition, and why feedback arrives faster.", "datePublished": "2026-10-28", "dateModified": "2026-10-28", "url": "https://t47group.com/blog/what-a-consumer-app-teaches-an-operator/", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://t47group.com/blog/what-a-consumer-app-teaches-an-operator/"}, "author": {"@type": "Person", "@id": "https://www.ninomihilli.com/#person", "name": "Nino Mihilli", "url": "https://www.ninomihilli.com", "jobTitle": "Founder & Managing Partner, T47 Group", "sameAs": ["https://www.ninomihilli.com/", "https://www.linkedin.com/in/ninomihilli", "https://www.instagram.com/ninomihilli/", "https://www.facebook.com/ninomihilli/", "https://www.facebook.com/ninomihilli10/", "https://x.com/NinoMihilli", "https://medium.com/@nino.mihilli_12552", "https://www.amazon.com/stores/author/B005E3OCH0", "https://about.me/ninomihilli", "https://500px.com/ninomihillientrepreur", "https://theorg.com/org/front-line-all-temps-llc/person/nino-mihilli", "https://krocphoenix.org/kroc-phoenix/advisory-board-members/", "https://t47group.com/", "https://xsatorilabs.net/", "https://nmwwd.org/", "https://www.flatstaffing.com/", "https://www.youtube.com/@ninomihilli", "https://ninomihilli.substack.com/"], "memberOf": {"@type": "OrganizationRole", "roleName": "Advisory Council Vice-Chairperson", "memberOf": {"@type": "Organization", "name": "The Salvation Army Kroc Center Phoenix", "url": "https://krocphoenix.org/"}}}, "publisher": {"@type": "Organization", "@id": "https://t47group.com/#org", "name": "T47 Group", "url": "https://t47group.com/", "logo": "https://t47group.com/apple-touch-icon.png", "sameAs": ["https://xsatorilabs.net", "https://www.flatstaffing.com", "https://www.ninomihilli.com"], "founder": {"@type": "Person", "@id": "https://www.ninomihilli.com/#person", "name": "Nino Mihilli", "url": "https://www.ninomihilli.com", "jobTitle": "Founder & Managing Partner, T47 Group", "sameAs": ["https://www.ninomihilli.com/", "https://www.linkedin.com/in/ninomihilli", "https://www.instagram.com/ninomihilli/", "https://www.facebook.com/ninomihilli/", "https://www.facebook.com/ninomihilli10/", "https://x.com/NinoMihilli", "https://medium.com/@nino.mihilli_12552", "https://www.amazon.com/stores/author/B005E3OCH0", "https://about.me/ninomihilli", "https://500px.com/ninomihillientrepreur", "https://theorg.com/org/front-line-all-temps-llc/person/nino-mihilli", "https://krocphoenix.org/kroc-phoenix/advisory-board-members/", "https://t47group.com/", "https://xsatorilabs.net/", "https://nmwwd.org/", "https://www.flatstaffing.com/", "https://www.youtube.com/@ninomihilli", "https://ninomihilli.substack.com/"], "memberOf": {"@type": "OrganizationRole", "roleName": "Advisory Council Vice-Chairperson", "memberOf": {"@type": "Organization", "name": "The Salvation Army Kroc Center Phoenix", "url": "https://krocphoenix.org/"}}}}, "keywords": "Consumer Apps, Lessons, Portfolio", "inLanguage": "en-US"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://t47group.com/"}, {"@type": "ListItem", "position": 2, "name": "Insights", "item": "https://t47group.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "What a consumer app teaches a B2B operator", "item": "https://t47group.com/blog/what-a-consumer-app-teaches-an-operator/"}]}]}</script>
+</head>
+<body>
+<header><div class="nav">
+  <a class="brand" href="https://t47group.com/">
+    <div class="logo">T47</div>
+    <div>T47 Group <small>Holding Company</small></div>
+  </a>
+  <nav class="links">
+    <a href="https://t47group.com/#portfolio">Portfolio</a><a href="https://t47group.com/#about">About</a><a href="https://t47group.com/xlabs/">Xsatori Labs</a><a href="https://t47group.com/#contact">Contact</a>
+    <a class="on" href="https://t47group.com/blog/">Insights</a>
+    <a class="btn" href="https://t47group.com/#contact">Get in touch</a>
+  </nav>
+</div></header>
+<main>
+<div class="wrap phead">
+  <span class="kicker">Portfolio Lessons</span>
+  <h1>What a consumer app teaches a B2B operator</h1>
+  <div class="meta"><span>Nino Mihilli</span><span class="dot">·</span>
+  <time datetime="2026-10-28">October 28, 2026</time>
+  <span class="dot">·</span><span>3 min read</span></div>
+</div>
+<div class="wrap"><article><p>Most of my career has been in business-to-business work. Staffing clients, service contracts, relationships measured in years. Hookah Royale is different. It is a consumer mobile app, and building it has been a useful education for someone used to selling to companies.</p>
+<p>Some of what I expected to carry over did. A lot did not. These are the lessons that have stood out.</p>
+<h2>Feedback arrives faster and louder</h2>
+<p>In B2B, a customer who is unhappy usually tells you in a meeting, or quietly reduces their orders over a few months. You have time to notice and respond.</p>
+<p>Consumers tell you immediately, and they often tell you by leaving. App store reviews, usage data, and drop-off at each step of a flow show you within days what works and what does not. That speed is a gift if you are set up to act on it. It is overwhelming if you are not.</p>
+<p>The adjustment for me was learning to treat early data as directional rather than definitive. One bad review is not a trend. A pattern of people abandoning the same screen is.</p>
+<h2>Acquisition is a cost, not a strategy</h2>
+<p>In consumer apps, it is easy to buy downloads. Paid advertising on social platforms and app stores will put your app in front of people at whatever volume you are willing to fund.</p>
+<p>The hard part is what happens after the install. If people do not come back, every dollar spent on acquisition is spent again next month to replace them. The numbers can look healthy on the top line while the business underneath is leaking.</p>
+<p>What I learned from staffing applies here more than I expected. Revenue is only as good as the margin and retention behind it. A consumer app that acquires cheaply and retains poorly is the same problem as a staffing client who pays late and churns. It looks like growth until you add up the cost of keeping it.</p>
+<h2>Retention is the product</h2>
+<p>In B2B, the relationship often carries the product. A client stays partly because they trust the account manager and switching is a hassle.</p>
+<p>Consumer apps have no such cushion. People stay only if the app keeps giving them a reason to open it. That means the real product is not the first experience. It is the tenth, the twentieth, the hundredth.</p>
+<p>This changed how I thought about where to invest. It is tempting to pour effort into onboarding and launch features, because that is what people see first. The better investment is often in whatever makes the app worth returning to.</p>
+<h2>Small details carry more weight</h2>
+<p>A business client will tolerate a clunky interface if the underlying service is strong. A consumer will not. Load times, button placement, a confusing message, a notification at the wrong moment. Each one is a small reason to leave, and they add up.</p>
+<p>That requires a different kind of attention from a team. It is less about big decisions and more about many small ones made carefully. Having a dedicated software team in the portfolio, through <a href="https://xsatorilabs.net">Xsatori Labs</a>, has made it possible to iterate on those details without starting from scratch every time.</p>
+<h2>Patience still matters</h2>
+<p>The speed of consumer feedback can create pressure to change everything constantly. Some changes are necessary. But constant change also makes it hard to know what worked, and it can confuse the users who were starting to form a habit.</p>
+<p>I have found it useful to separate fixes from experiments. Fixes go out quickly. Experiments are run deliberately, one at a time, with a clear idea of what we are measuring. That discipline is the same one we use for capital in the portfolio: make bets small enough to learn from.</p>
+<h2>The lessons travel back</h2>
+<p>Building a consumer app has changed how I look at the B2B businesses too. It made me more attentive to the small moments in a customer's experience, more skeptical of growth that is bought rather than earned, and more interested in why customers come back, not just why they arrive.</p>
+<p>That is one of the quieter advantages of running a portfolio. Each company teaches you something, and the lessons do not stay inside the company that taught them.</p></article>
+<div class="tags"><span class="tag">Consumer Apps</span><span class="tag">Lessons</span><span class="tag">Portfolio</span></div>
+<div class="bio"><div class="av">NM</div>
+        <div><b>Nino Mihilli</b><p>Founder and operator. Twenty years scaling and exiting businesses across staffing, software, and consumer products. Based in Phoenix, Arizona. <a href="https://www.ninomihilli.com">www.ninomihilli.com</a></p></div></div>
+<div class="cta"><h2>Building something that belongs in the group?</h2><p>Partnerships, ventures, or a company you think fits the portfolio — we'd love to hear from you.</p>
+      <a class="btn" href="https://t47group.com/#contact">Get in touch</a></div>
+      <a class="backlink" href="https://t47group.com/blog/">← All insights</a></div>
+</main>
+<footer><div class="foot">
+  <div>© 2026 T47 Group · Phoenix, AZ · All rights reserved.</div>
+  <div><a href="https://t47group.com/#portfolio">Portfolio</a> · <a href="https://t47group.com/xlabs/">Xsatori Labs</a> · <a href="https://t47group.com/blog/">Insights</a> · <a href="mailto:info@t47group.com">Contact</a></div>
+</div></footer>
+</body>
+</html>
